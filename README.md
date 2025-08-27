@@ -1,3 +1,4 @@
+```
 pip install aisuite[all]
 pip install groq
 pip install openai
