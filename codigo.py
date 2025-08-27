@@ -280,6 +280,8 @@ np.savetxt('dados_tcc_llama_e_mixtral.csv', np.c_[pergunta_arr, origem_arr, mode
 
 # -------------
 # AVALIAÇÃO A SER FEITA APÓS O TRATAMENTO DAS RESPOSTAS
+# !!! OS ARQUIVOS TRATADOS DEVEM TER '_ajustados' no fim do nome para o código a seguir funcionar sem modificações
+
 
 data = pd.read_csv('dados_tcc_llama_e_mixtral_ajustados.csv', sep=";", keep_default_na=False)
 data['avaliacao'] = np.where(data['r_ajustada'] == data['r_correta'], 'correta', np.where(data['r_ajustada'] == data['r_intuitiva'], 'intuitiva', np.where(data['r_ajustada'] == '-', 'nao_respondida', 'outro')))
